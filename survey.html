@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey — MarketPulse Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">MarketPulse Research</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="services.html" class="nav-link">Услуги</a>
+        <a href="survey.html" class="nav-link active">Опрос</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="page-header">
+      <div class="container">
+        <h1>Короткий опрос аудитории</h1>
+        <p class="lead">Ответьте на 5 вопросов — данные помогут нам предложить подходящее решение.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <form id="surveyForm" class="card survey-form">
+        <div class="form-row">
+          <label for="q1">1) Ваша роль?</label>
+          <select id="q1" required>
+            <option value="">Выберите…</option>
+            <option>Собственник/СЕО</option>
+            <option>Маркетолог/Аналитик</option>
+            <option>Продажи/BD</option>
+            <option>Другое</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="q2">2) Размер компании</label>
+          <select id="q2" required>
+            <option value="">Выберите…</option>
+            <option>1–10</option>
+            <option>11–50</option>
+            <option>51–200</option>
+            <option>200+</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>3) Какие задачи актуальны? (можно несколько)</label>
+          <div class="checkboxes">
+            <label><input type="checkbox" name="q3" value="Конъюнктура"> Конъюнктура рынка</label>
+            <label><input type="checkbox" name="q3" value="Опрос"> Опрос целевой аудитории</label>
+            <label><input type="checkbox" name="q3" value="Интервью"> Глубинные интервью</label>
+            <label><input type="checkbox" name="q3" value="Цены"> Тестирование цены/офера</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="q4">4) Примерный бюджет (₽)</label>
+          <input id="q4" type="number" min="0" step="1000" placeholder="Например, 100000">
+        </div>
+
+        <div class="form-row">
+          <label for="q5">5) Email для отчёта</label>
+          <input id="q5" type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Отправить</button>
+          <button type="button" id="resetSurvey" class="btn btn-secondary">Сбросить</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Modal for survey results -->
+    <div id="surveyModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body" id="modalBody">
+          <div id="surveySummary"></div>
+          <div id="personalizedAdvice"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">MarketPulse Research</div>
+      <div class="footer-contact">
+        ИНН 246602726289 — Зернов Павел Николаевич · Тел.: +7 (999) 123‑45‑67 · Email: research@example.com
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/survey.js"></script>
+</body>
+</html>
+
+
